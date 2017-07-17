@@ -4,26 +4,25 @@
 
 ## Install  
 
-To install generator-koa-rest from npm, run:  
+To install generator-koa-start from npm, run:  
 
 ```bash
-npm install -g generator-koa-rest
+npm install -g generator-koa-start
 ```
 
 Initiate the generator an empty project directory:  
 
 ```bash
-yo koa-rest
+yo koa-start
 ```
 
 Creating a restful resource:  
 
 ```bash
-yo koa-rest:resource cars
+yo koa-start:resource cars
 ```
 
 ## License
 
-Copyright (c) 2015 Patrick Wolleb  
 Licensed under the MIT license.
 

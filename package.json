@@ -1,14 +1,14 @@
 {
-  "name": "generator-koa-rest",
-  "version": "1.1.7",
+  "name": "generator-koa-start",
+  "version": "0.1.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "patrickwolleb/generator-koa-rest",
+  "repository": "nbwsc/generator-koa-rest",
   "author": {
-    "name": "Patrick Wolleb",
-    "email": "patrick.wolleb@shmedia.co.uk",
-    "url": "https://github.com/PatrickWolleb"
+    "name": "nbwsc",
+    "email": "nbwsc@icloud.com",
+    "url": "https://github.com/nbwsc"
   },
   "engines": {
     "node": ">=0.10.0"

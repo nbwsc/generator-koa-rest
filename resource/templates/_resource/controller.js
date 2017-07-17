@@ -1,7 +1,9 @@
 'use strict';
 
 
-exports.index = function*(next) {
-	this.status = 200;
-  this.body = [];
+exports.exports = {
+  index: async (ctx) => {
+    ctx.status = 200;
+    ctx.body = [];
+  }
 };

@@ -1,5 +1,7 @@
 # Yeoman koa RESTful generator
 
+[![wercker status](https://app.wercker.com/status/31763c5edc39aba7abf78a39d56d8cf3/m "wercker status")](https://app.wercker.com/project/bykey/31763c5edc39aba7abf78a39d56d8cf3)
+
 ## Feature
 
 koa2.x you can use async/await .

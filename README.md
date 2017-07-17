@@ -22,7 +22,7 @@ Creating a restful resource:
 yo koa-start:resource cars
 ```
 
-* folked from [this](https://github.com/PatrickWolleb/generator-koa-rest)
+## folked from [this](https://github.com/PatrickWolleb/generator-koa-rest)
 which is based on Koa1.x & use generator instead of async/await .
 And some dependence need to be updated
 

@@ -1,7 +1,9 @@
-box: olger/box-yeoman
-build:
-    steps:
-        - wercker/npm-install
-        - olger/yeoman-bower-install
-        - wercker/grunt:
-            tasks: build
+# The container definition we want to use for developing our app
+box: node:7.9.0
+# Defining the dev pipeline
+dev:
+  steps:
+    - npm-install
+    - internal/watch:
+        code: node app.js
+        reload: true

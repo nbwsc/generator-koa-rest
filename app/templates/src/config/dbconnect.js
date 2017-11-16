@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise
+
+const redis = require('promise-redis')();
+const redisClient = redis.createClient();
 
 const dbname = '',
     ip = '',
@@ -23,7 +27,8 @@ module.exports = {
     reconnect: () => {
         mongoose.connection.db.close();
         mongoose.connect(`mongodb://${username}:${pwd}@${ip}:${port}/${dbname}?authSource=admin`);
-    }
+    },
+    redis: redisClient
 }
 // process.on('uncaughtException', function (err) {
 //     console.dir(err);

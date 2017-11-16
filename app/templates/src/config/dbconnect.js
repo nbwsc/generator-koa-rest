@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise
 
 const redis = require('promise-redis')();
-const redisClient = redis.createClient();
-
+const redisClient = redis.createClient({
+    host: '127.0.0.1',
+    port: '6378'
+});
 const dbname = '',
     ip = '',
     port = '',
@@ -11,8 +13,10 @@ const dbname = '',
     pwd = '';
 
 (async () => {
-
-    await mongoose.connect(`mongodb://${username}:${pwd}@${ip}:${port}/${dbname}?authSource=admin`);
+    let options = {
+        useMongoClient: true,
+    }
+    await mongoose.connect(`mongodb://${username}:${pwd}@${ip}:${port}/${dbname}?authSource=admin`, options);
     mongoose.connection.db.on('error', function (error) {
         console.log(`i catch you ! ${error}`)
     });

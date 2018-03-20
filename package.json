@@ -1,35 +1,30 @@
 {
-  "name": "generator-koa-start",
-  "version": "0.1.3",
-  "description": "Yeoman generator",
-  "license": "MIT",
-  "main": "app/index.js",
-  "repository": "nbwsc/generator-koa-rest",
-  "author": {
-    "name": "nbwsc",
-    "email": "nbwsc@icloud.com",
-    "url": "https://github.com/nbwsc"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "files": [
-    "app",
-    "resource"
-  ],
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "dependencies": {
-    "yeoman-generator": "^0.18.9",
-    "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
-  },
-  "devDependencies": {
-    "fs-extra": "^0.16.5",
-    "mocha": "*"
-  }
+    "name": "generator-koa-start",
+    "version": "0.2.1",
+    "description": "Yeoman generator",
+    "license": "MIT",
+    "main": "app/index.js",
+    "repository": "nbwsc/generator-koa-rest",
+    "author": {
+        "name": "nbwsc",
+        "email": "nbwsc@icloud.com",
+        "url": "https://github.com/nbwsc"
+    },
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "files": ["app", "resource"],
+    "keywords": ["yeoman-generator"],
+    "dependencies": {
+        "yeoman-generator": "^0.18.9",
+        "chalk": "^1.0.0",
+        "yosay": "^1.0.2"
+    },
+    "devDependencies": {
+        "fs-extra": "^0.16.5",
+        "mocha": "*"
+    }
 }

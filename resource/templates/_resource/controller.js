@@ -1,9 +1,8 @@
-'use strict';
-
+"use strict";
 
 module.exports = {
-  index: async (ctx) => {
-    ctx.status = 200;
-    ctx.body = [];
-  }
+    index: async ctx => {
+        ctx.status = 200;
+        ctx.body = [];
+    }
 };

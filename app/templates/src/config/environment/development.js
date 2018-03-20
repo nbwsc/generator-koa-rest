@@ -1,8 +1,4 @@
-'use strict';
-
-
+"use strict";
 
 // Development configuration
-module.exports = {
-  
-};
+module.exports = {};

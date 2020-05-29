@@ -2,11 +2,11 @@
  * Main application routes
  */
 
-"use strict";
+'use strict';
 
-var mount = require("koa-mount");
+const mount = require('koa-mount');
 
-module.exports = function(app) {
+module.exports = function (app) {
     // YEOMAN INJECT ROUTES BELOW
-    app.use(mount("/", require("../resources/root")));
+    app.use(mount('/', require('../resources/root')));
 };

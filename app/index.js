@@ -4,11 +4,11 @@ var chalk = require("chalk");
 var yosay = require("yosay");
 
 module.exports = yeoman.generators.Base.extend({
-    initializing: function() {
+    initializing: function () {
         this.pkg = require("../package.json");
     },
 
-    prompting: function() {
+    prompting: function () {
         var done = this.async();
         this.prompt(
             [
@@ -16,16 +16,16 @@ module.exports = yeoman.generators.Base.extend({
                     type: "input",
                     name: "name",
                     message: "Your API name",
-                    default: this.appname // Default to current folder name
+                    default: this.appname, // Default to current folder name
                 },
                 {
                     type: "input",
                     name: "portal",
                     message: "Your API docs URL",
-                    default: "API Docs URL"
-                }
+                    default: "API Docs URL",
+                },
             ],
-            function(answers) {
+            function (answers) {
                 this.name = answers.name;
                 this.portal = answers.portal;
                 done();
@@ -34,7 +34,7 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     writing: {
-        app: function() {
+        app: function () {
             var apiName = this.name;
             var portal = this.portal;
 
@@ -47,33 +47,37 @@ module.exports = yeoman.generators.Base.extend({
                 this.templatePath("src/resources/root/root.controller.js"),
                 this.destinationPath("src/resources/root/root.controller.js"),
                 {
-                    process: function(input) {
+                    process: function (input) {
                         var output = input
                             .toString("utf-8")
                             .replace("{{API_NAME}}", apiName)
                             .replace("{{API_PORTAL}}", portal);
                         return output;
-                    }
+                    },
                 }
             );
         },
 
-        projectfiles: function() {
+        projectfiles: function () {
             this.fs.copy(
                 this.templatePath(".editorconfig"),
                 this.destinationPath(".editorconfig")
             );
 
             this.fs.copy(
-                this.templatePath(".jshintrc"),
-                this.destinationPath(".jshintrc")
+                this.templatePath(".prettierrc"),
+                this.destinationPath(".prettierrc")
             );
-        }
+            this.fs.copy(
+                this.templatePath(".eslintrc.json"),
+                this.destinationPath(".eslintrc.json")
+            );
+        },
     },
 
-    install: function() {
+    install: function () {
         this.installDependencies({
-            skipInstall: this.options["skip-install"]
+            skipInstall: this.options["skip-install"],
         });
-    }
+    },
 });
